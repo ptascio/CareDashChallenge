@@ -35,18 +35,6 @@ h2 {
   color: #000;
 }
 
-@media only screen and (max-width: 1000px) {
-    .articles {
-        display: none;
-    }
-}
-
-@media only screen and (max-width: 750px) {
-  .other-nav-els {
-    display: none;
-  }
-}
-
 .doctor-rating-dropdown {
   display: none;
   margin-top: 25px;
@@ -192,4 +180,37 @@ input:focus {
 
 .display-errors {
   display: block;
+}
+
+footer {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+
+.footer-container {
+  width: 200px;
+  margin: 10px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .articles {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+  .other-nav-els  {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .bottom-container,
+  .bottom-info {
+    display: none;
+  }
 }
