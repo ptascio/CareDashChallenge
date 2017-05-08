@@ -252,16 +252,40 @@ footer h3 {
   background: #3b5998;
 }
 
+.facebook-social:hover {
+  transition: background 0.5s linear;
+  background: #293e6a;
+
+}
+
 .twitter-social {
   background: #55acee;
+}
+
+.twitter-social:hover {
+  transition: background 0.5s linear;
+  background: #3b78a6;
+
 }
 
 .insta-social {
   background: #f56040;
 }
 
+.insta-social:hover {
+  transition: background 0.5s linear;
+  background: #c44c33;
+
+}
+
 .pin-social {
   background: #bd081c;
+}
+
+.pin-social:hover {
+  transition: background 0.5s linear;
+  background: #970616;
+
 }
 
 @media only screen and (max-width: 1000px) {

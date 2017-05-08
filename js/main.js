@@ -102,10 +102,12 @@ function checkValues(){
 function submitForm(response){
   if (response){
     clearForm();
-    console.log("Nice job!");
-  }else {
-    console.log("You got work to do");
   }
+}
+
+function hideModal(){
+  var modal = document.getElementById("submission-modal");
+  modal.style.display = "none";
 }
 
 function clearForm(){
@@ -113,6 +115,8 @@ function clearForm(){
   for(var i = 0; i < inputs.length; i++){
     inputs[i].value = "";
   }
+  var modal = document.getElementById("submission-modal");
+  modal.style.display = "block";
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -128,4 +132,12 @@ document.addEventListener("DOMContentLoaded", () => {
   var confirmInput = document.getElementById("passwordconfirm");
   confirmInput.oninput = confirmPassword;
   submitButton.addEventListener("click", checkValues);
+  var modal = document.getElementById("submission-modal");
+  window.onclick = function(event) {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+  };
+  var closeModal = document.getElementById("close-modal");
+  closeModal.addEventListener("click", hideModal);
 });
