@@ -17,16 +17,12 @@ function handleEmail(e){
 }
 
 function checkEmail(inputemail){
-  //this is all uppercase
-  console.log("comparing emails");
   var uppercasePassword = inputemail.toUpperCase();
   var re = new RegExp("^([A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,})$");
-  if (!re.test(uppercasePassword)){
+  if (inputemail.length > 0 && !re.test(uppercasePassword)){
     var emailInputErrors = document.getElementById("emailErrors");
-    if (emailInputErrors.innerText === ""){
       emailInputErrors.innerText = "Not a valid email.";
       emailInputErrors.className += " display-errors";
-    }
   }
   return re.test(uppercasePassword);
 }
@@ -41,44 +37,64 @@ function confirmPassword(e){
 
 function checkPassword(originalPass, secondPass){
   if (originalPass !== secondPass){
+    var pce = document.getElementById("passwordConfirmErrors");
+    pce.innerText = "Passwords must match";
+    pce.className += " display-errors";
     return false;
   }else {
+    resetErrors("passwordConfirmErrors");
     return true;
   }
+}
+
+function resetErrors(elId){
+  var thisEl = document.getElementById(elId);
+  thisEl.innerText = "";
+  thisEl.className -= " display-errors";
+}
+
+function setEntryCantBeBlank(elId){
+  var thisEl = document.getElementById(elId);
+  thisEl.innerText = "Entry can't be blank";
+  thisEl.className += " display-errors";
 }
 
 function checkValues(){
   var response = true;
   if (firstName.length < 1){
-    var fne = document.getElementById("firstNameErrors");
-    fne.innerText = "Entry can't be blank";
-    fne.className += " display-errors";
     response = false;
-    console.log("Entry can't be blank");
+    setEntryCantBeBlank("firstNameErrors");
+  }else {
+    resetErrors("firstNameErrors");
   }
   if (lastName.length < 1){
     response = false;
-    console.log("Entry can't be blank");
+    setEntryCantBeBlank("lastNameErrors");
+  }else {
+    resetErrors("lastNameErrors");
   }
   if (email.length < 1){
-    console.log("in here");
-    var ee = document.getElementById("emailErrors");
-    ee.innerText = "Entry can't be blank";
-    ee.className += " display-errors";
     response = false;
-    console.log("Entry can't be blank");
+    setEntryCantBeBlank("emailErrors");
+  } else if (email.length > 1 && checkEmail(email)){
+    resetErrors("emailErrors");
   }
-  if (password.length < 6){
+
+  if (password.length < 1){
     response = false;
-    console.log("Password must be minimum of 6 chars");
+    setEntryCantBeBlank("passwordErrors");
+  }else if (password.length < 6){
+    var pe = document.getElementById("passwordErrors");
+    pe.innerText = "Password must be minimum of 6 characters";
+    pe.className += " display-errors";
+  } else {
+    resetErrors("passwordErrors");
   }
   if (!checkEmail(email)){
     response = false;
-    console.log("Not a good email");
   }
   if (!checkPassword(password, passwordConfirm)){
     response = false;
-    console.log("passwords don't match");
   }
   submitForm(response);
 }
