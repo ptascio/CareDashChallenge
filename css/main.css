@@ -231,6 +231,30 @@ footer h3 {
 
 .social-icons li {
   display: inline-block;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  padding: 3px;
+  margin-right: 6px;
+}
+
+.facebook-social {
+  background: #3b5998;
+}
+
+.twitter-social {
+  background: #55acee;
+}
+
+.insta-social {
+  background: #f56040;
+}
+
+.pin-social {
+  background: #bd081c;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -261,5 +285,14 @@ footer h3 {
 
   .collapsed-footer {
     text-align: center;
+  }
+
+  .social-icons, .copyright {
+    text-align: center;
+    width: 100%;
+  }
+
+  .copyright {
+    margin: 10px 0;
   }
 }
