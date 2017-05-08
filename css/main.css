@@ -1,0 +1,182 @@
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+nav {
+  border-bottom: 1px solid black;
+  height: 60px;
+}
+
+nav img {
+  float: left;
+  margin: 0 5px;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  margin: 10px;
+  padding: 10px;
+  float: left;
+}
+
+nav a:hover {
+  color: #008798;
+}
+
+button {
+  cursor: pointer;
+}
+
+h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #000;
+}
+
+@media only screen and (max-width: 1000px) {
+    .articles {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+  .other-nav-els {
+    display: none;
+  }
+}
+
+.doctor-rating-dropdown {
+  display: none;
+  margin-top: 25px;
+  z-index: 1;
+  border: 1px solid grey;
+  border-radius: 3px;
+  background: #fff;
+}
+
+.doctor-rating-dropdown li {
+  padding: 10px;
+  color: #000;
+}
+
+.doctor-rating-dropdown li:hover {
+  color: #008798;
+}
+
+.doctor-rating-dropdown-show:hover .doctor-rating-dropdown {
+    display: block;
+}
+
+.main-side {
+  width: 100%;
+  height: 500px;
+  background-image: url('../imgs/happypeople.jpeg');
+  background-size: cover;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.sign-up-form {
+  float: right;
+  border: 1px solid #008798;
+  border-radius: 3px;
+  background: #008798;
+  margin: 20px;
+  width: 300px;
+  padding: 30px;
+}
+
+.sign-up-form input {
+  width: 100%;
+  line-height: 30px;
+  margin: 3px;
+  border: 1px solid #008798;
+  border-radius: 3px;
+  font-size: 12px;
+  padding-left: 5px;
+  box-sizing: border-box;
+}
+
+.sign-up-form label,
+.sign-up-form h2 {
+  color: #fff;
+}
+
+
+input:focus {
+  outline: none;
+}
+
+.sign-up-form button {
+  background-color: #83a603;
+  border: 1px solid #83a603;
+  font-size: 14px;
+  padding: 12px;
+  margin-left: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.sign-up-form button:hover {
+  background-color: #6a8702;
+  border: 1px solid #6a8702;
+}
+
+.form-els {
+  display: block;
+  padding: 5px;
+}
+
+.bottom-container {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+
+.reasons-container {
+  width: 225px;
+  height: 375px;
+  border: 1px solid #000;
+  margin: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.reasons-container > * {
+  padding: 7px;
+}
+
+.reasons-container p {
+  text-align: left;
+}
+
+.reasons-container button {
+  float: left;
+  margin-left: 5px;
+}
+
+.reasons-container img {
+  width: 175px;
+  height: 100px;
+}
+
+.errors {
+  color: red;
+  font-size: 12px;
+  background: #fff;
+  width: 40%;
+  padding: 5px;
+  margin-left: 5px;
+  border-radius: 3px;
+  border: 1px solid red;
+  display: none;
+}
+
+.display-errors {
+  display: block;
+}
