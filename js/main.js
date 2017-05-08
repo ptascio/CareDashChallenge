@@ -18,12 +18,15 @@ function handleEmail(e){
 
 function checkEmail(inputemail){
   //this is all uppercase
+  console.log("comparing emails");
   var uppercasePassword = inputemail.toUpperCase();
   var re = new RegExp("^([A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,})$");
   if (!re.test(uppercasePassword)){
     var emailInputErrors = document.getElementById("emailErrors");
-    emailInputErrors.innerText = "Not a valid email.";
-    emailInputErrors.className += " display-errors";
+    if (emailInputErrors.innerText === ""){
+      emailInputErrors.innerText = "Not a valid email.";
+      emailInputErrors.className += " display-errors";
+    }
   }
   return re.test(uppercasePassword);
 }
@@ -58,6 +61,10 @@ function checkValues(){
     console.log("Entry can't be blank");
   }
   if (email.length < 1){
+    console.log("in here");
+    var ee = document.getElementById("emailErrors");
+    ee.innerText = "Entry can't be blank";
+    ee.className += " display-errors";
     response = false;
     console.log("Entry can't be blank");
   }
