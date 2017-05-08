@@ -223,6 +223,11 @@ footer h3 {
   color: #008798;
 }
 
+.footer-container .social:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
 .copyright {
   border-top: 1px solid #bbb;
   width: 100%;
@@ -246,6 +251,10 @@ footer h3 {
   text-align: center;
   padding: 3px;
   margin-right: 6px;
+}
+
+.social-icons a:hover {
+  color: #fff;
 }
 
 .facebook-social {
@@ -286,6 +295,11 @@ footer h3 {
   transition: background 0.5s linear;
   background: #970616;
 
+}
+
+.collapsed-footer a {
+  text-decoration: none;
+  color: inherit;
 }
 
 @media only screen and (max-width: 1000px) {

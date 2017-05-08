@@ -38,6 +38,11 @@
   cursor: pointer;
 }
 
+.modal-icons a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .modal-list h3 {
   margin: 15px;
 }
