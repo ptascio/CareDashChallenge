@@ -47,6 +47,9 @@ function checkPassword(originalPass, secondPass){
 function checkValues(){
   var response = true;
   if (firstName.length < 1){
+    var fne = document.getElementById("firstNameErrors");
+    fne.innerText = "Entry can't be blank";
+    fne.className += " display-errors";
     response = false;
     console.log("Entry can't be blank");
   }

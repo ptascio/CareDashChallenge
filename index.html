@@ -31,12 +31,12 @@
           <div class="form-els">
             <label for="">First Name:</label>
             <input id="firstname" type="text" name="" value="" placeholder="First Name" >
-            <p class="errors">Entry Cannot Be Blank</p>
+            <p id="firstNameErrors" class="errors">Entry Cannot Be Blank</p>
           </div>
           <div class="form-els">
             <label for="">Last Name:</label>
             <input id="lastname" type="text" name="" value="" placeholder="Last Name">
-            <p class="errors">Entry Cannot Be Blank</p>
+            <p id="lastNameErrors" class="errors">Entry Cannot Be Blank</p>
           </div>
           <div class="form-els">
             <label for="">Email:</label>
@@ -46,12 +46,12 @@
           <div class="form-els">
             <label for="">Password:</label>
             <input id="password" type="password" name="" value="" placeholder="Password must be at least 6 characters">
-            <p class="errors"></p>
+            <p id="passwordErrors" class="errors"></p>
           </div>
           <div class="form-els">
             <label for="">Confirm Password:</label>
             <input id="passwordconfirm" type="password" name="" value="" placeholder="Confirm Password">
-            <p class="errors"></p>
+            <p id="passwordConfirmErrors" class="errors"></p>
           </div>
           <div class="form-els">
             <button id="submitbutton" type="button" name="button">Sign Up To Claim Your Profile</button>
@@ -59,8 +59,9 @@
         </form>
       </div>
     </section>
-    <h2>Reasons To Sign Up</h2>
-    <section class="bottom-container">
+
+    <section class="bottom-container bottom-info">
+      <h2 >Reasons To Sign Up</h2>
       <div class="reasons-container">
         <img src="./imgs/doctor.jpeg" alt="">
         <h3>Make Friends</h3>
